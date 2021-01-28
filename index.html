@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informações do dispositivo</title>
+
+<script id="sap-ui-bootstrap" 
+     type="text/javascript"
+     src="https://ui5.sap.com/resources/sap-ui-core.js"
+     data-sap-ui-theme="sap_fiori_3_dark"
+     data-sap-ui-libs="sap.m"
+     data-sap-ui-compatVersion="edge">
+</script>
+
+
+<script>
+    var oLabelOS = new sap.m.Label();
+    oLabelOS.setText("Sistema operacional");
+
+    var oTextOS = new sap.m.Text();
+    oTextOS.setText(sap.ui.Device.os.name);
+
+    
+    var oLabelBrowser = new sap.m.Label();
+    oLabelBrowser.setText("Navegador");
+
+    var oTextBrowser = new sap.m.Text();
+    oTextBrowser.setText(sap.ui.Device.browser.name);
+
+
+    var oVBox = new sap.m.VBox();
+
+    oVBox
+        .addItem(oLabelOS)
+        .addItem(oTextOS)
+        .addItem(oLabelBrowser)
+        .addItem(oTextBrowser);
+       
+    oVBox.placeAt("root");
+
+    // oLabelOS.placeAt("root");
+    // oTextOS.placeAt("root");
+    // oLabelBrowser.placeAt("root");
+    // oTextBrowser.placeAt("root");
+
+</script>
+
+</head>
+
+<body id="root"class="sapUiBody">
+    
+</body>
+
+
+</html>
